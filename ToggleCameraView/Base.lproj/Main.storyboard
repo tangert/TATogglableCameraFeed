@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToggleCameraView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,70 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Nq-ac-tAE" customClass="PreviewView" customModule="ToggleCameraView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="173" width="375" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jHL-u4-nSm" appends="YES" id="gFp-x0-PZW"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbm-BO-O9X">
+                                <rect key="frame" x="275" y="82" width="73" height="30"/>
+                                <state key="normal" title="Show feed"/>
+                                <connections>
+                                    <action selector="pressShowFeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kP7-BS-Kjz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLZ-UW-VxH">
+                                <rect key="frame" x="51" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-jh-VWP">
+                                <rect key="frame" x="290" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zy-Or-Bht">
+                                <rect key="frame" x="27" y="82" width="90" height="30"/>
+                                <state key="normal" title="Start session"/>
+                                <connections>
+                                    <action selector="pressStartSession:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5C-NA-tU1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Zy-Or-Bht" firstAttribute="baseline" secondItem="fbm-BO-O9X" secondAttribute="baseline" id="2k2-Nb-XYd"/>
+                            <constraint firstItem="5Nq-ac-tAE" firstAttribute="top" secondItem="HLZ-UW-VxH" secondAttribute="bottom" constant="32" id="EO9-Re-FqG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fbm-BO-O9X" secondAttribute="trailing" constant="11" id="IfZ-h2-wpu"/>
+                            <constraint firstItem="fbm-BO-O9X" firstAttribute="centerX" secondItem="ROl-jh-VWP" secondAttribute="centerX" id="KWs-aj-5X1"/>
+                            <constraint firstItem="5Nq-ac-tAE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SfJ-SB-Kny"/>
+                            <constraint firstAttribute="trailing" secondItem="5Nq-ac-tAE" secondAttribute="trailing" id="b4k-dQ-5h9"/>
+                            <constraint firstItem="7Zy-Or-Bht" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="bSg-pN-ZDd"/>
+                            <constraint firstItem="HLZ-UW-VxH" firstAttribute="top" secondItem="7Zy-Or-Bht" secondAttribute="bottom" constant="8" symbolic="YES" id="geZ-Bf-6We"/>
+                            <constraint firstItem="7Zy-Or-Bht" firstAttribute="centerX" secondItem="HLZ-UW-VxH" secondAttribute="centerX" id="gyB-lH-zM6"/>
+                            <constraint firstItem="5Nq-ac-tAE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="mbH-ZJ-At6"/>
+                            <constraint firstItem="HLZ-UW-VxH" firstAttribute="baseline" secondItem="ROl-jh-VWP" secondAttribute="baseline" id="qLb-ej-1yN"/>
+                            <constraint firstItem="7Zy-Or-Bht" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="s90-cF-1DY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="feedLabel" destination="ROl-jh-VWP" id="y3E-MY-9Df"/>
+                        <outlet property="previewView" destination="5Nq-ac-tAE" id="oKT-t0-4Np"/>
+                        <outlet property="sessionLabel" destination="HLZ-UW-VxH" id="35T-Bq-bbf"/>
+                        <outlet property="showFeedButton" destination="fbm-BO-O9X" id="NYV-Ue-k3W"/>
+                        <outlet property="startSessionButton" destination="7Zy-Or-Bht" id="1lK-wj-uZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jHL-u4-nSm"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

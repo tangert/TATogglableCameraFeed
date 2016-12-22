@@ -14,6 +14,7 @@
 		36D8794F1E0C5A880055A92A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D8794D1E0C5A880055A92A /* LaunchScreen.storyboard */; };
 		36D8795A1E0C5A880055A92A /* ToggleCameraViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D879591E0C5A880055A92A /* ToggleCameraViewTests.swift */; };
 		36D879651E0C5A880055A92A /* ToggleCameraViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D879641E0C5A880055A92A /* ToggleCameraViewUITests.swift */; };
+		36D879731E0C5AEE0055A92A /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D879721E0C5AEE0055A92A /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		36D879601E0C5A880055A92A /* ToggleCameraViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToggleCameraViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D879641E0C5A880055A92A /* ToggleCameraViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleCameraViewUITests.swift; sourceTree = "<group>"; };
 		36D879661E0C5A880055A92A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36D879721E0C5AEE0055A92A /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				36D879441E0C5A880055A92A /* AppDelegate.swift */,
 				36D879461E0C5A880055A92A /* ViewController.swift */,
+				36D879721E0C5AEE0055A92A /* PreviewView.swift */,
 				36D879481E0C5A880055A92A /* Main.storyboard */,
 				36D8794B1E0C5A880055A92A /* Assets.xcassets */,
 				36D8794D1E0C5A880055A92A /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				36D879471E0C5A880055A92A /* ViewController.swift in Sources */,
 				36D879451E0C5A880055A92A /* AppDelegate.swift in Sources */,
+				36D879731E0C5AEE0055A92A /* PreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8TWVWBQE3T;
 				INFOPLIST_FILE = ToggleCameraView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tangert.ToggleCameraView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8TWVWBQE3T;
 				INFOPLIST_FILE = ToggleCameraView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tangert.ToggleCameraView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
